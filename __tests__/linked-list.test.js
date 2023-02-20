@@ -57,5 +57,13 @@ describe('Linked List', ()=> {
 
     expect(linked.includes('country')).toBe(false);
   });
+
+  it ('should append to end', () => {
+    const linked = new LinkedList();
+    linked.insert('metalcore');
+    linked.insertAfter('metalcore', 'end');
+
+    expect(linked.head).toEqual('end');
+  })
 });
 
