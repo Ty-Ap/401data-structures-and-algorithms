@@ -57,5 +57,24 @@ describe('Linked List', ()=> {
 
     expect(linked.includes('country')).toBe(false);
   });
+
+  it('should return the nth from the end', ()=> {
+    const linked = new LinkedList();
+    linked.insert('metalcore');
+    linked.insert('deathmetal');
+
+    linked.NthFromTheEnd(1);
+
+    expect(linked.head.value).toEqual('deathmetal');
+    expect(linked.NthFromTheEnd('')).toEqual('exception');
+  });
+
+  it ('should append to end', () => {
+    const linked = new LinkedList();
+    linked.insert('metalcore');
+    linked.insertAfter('metalcore', 'end');
+
+    expect(linked.head).toEqual('end');
+  })
 });
 
