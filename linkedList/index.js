@@ -1,72 +1,29 @@
 'use strict';
 
-
-
 class LinkedList {
   constructor() {
     this.head = null;
     this.length = 0;
   }
 
-  insert(value) {
-    const prevHead = this.head;
+  insert(value){
+    const oldHead = this.head;
+    // this.head = new Node(value, this.head); passing current head to next node (one liner)
     this.head = new Node(value);
-    this.head.next = prevHead;
-    this.length+=1;
+    this.head.next = oldHead;
+    this.length++;
+    return this.length;
   }
-
-  insertAfter(value, newValue) {
-    let current = this.head;
-    while (current) {
-      if (current.value === value) {
-        let newNext = current.next;
-        current.next = new Node(newValue, newNext);
-        this.length+=1;
-        return this.length;
-
-      } else {
-        current = current.next;
-      }
-    }
-  }
-
-  NthFromTheEnd(n){
-    let current = this.head;
-    this.head.next = current;
-    let position= this.length - n;
-    if(position<0||n===''){
-      return 'exception';
-    }
-    for(let i=0; i<=position;i++){
-      current = current.next;
-    } 
-    return current.value;
-  }
-
-
-  // (this.length - n);
-
-  // insertBefore(value,newValue){
-  //   //adds a new node with the given new value immediately before the first node that has the value specified
-
-  // }
-
-  // insertAfter(value,newValue){
-  //   // adds a new node with the given new value immediately after the first node that has the value specified
-
-  // }
-
 
   toString() {
     let current = this.head;
-    let text = '';
-
+    let str = '';
     while (current) {
-      text += `{ ${current.value} } ->`;
-
+      str += `{ ${current.value} } -> `;
       current = current.next;
     }
-    return text + 'NULL';
+
+    return str += 'NULL';
   }
 
   includes(value) {
@@ -79,27 +36,91 @@ class LinkedList {
     }
     return false;
   }
-}
 
+  append(value) {
+    if(!this.head){
+      this.insert(value);
+      return this.length;
+    }
+    let current = this.head;
+    while (current.next) {
+      current = current.next;
+    }
+    current.next = new Node(value);
+    this.length++;
+    return this.length;
+  }
 
+  insertBefore(value, newValue) {
+    let current = this.head;
+    if(current.value === value){
+      this.insert(newValue);
+      return this.length;
+    }
+    while (current.next) {
+      if(current.next.value === value){
+        let oldNext = current.next;
+        current.next = new Node(newValue, oldNext);
+        this.length++;
+        return this.length;
+      } else {
+        current = current.next;
+      }
+    }
+  }
 
+  insertAfter(value, newValue) {
+    let current = this.head;
+    while (current) {
+      if(current.value === value){
+        let newNext = current.next;
+        current.next = new Node(newValue, newNext);
+        this.length++;
+        return this.length;
+      } else {
+        current = current.next;
+      }
+    }
+  }
 
-// append
-// arguments: new value
-// 
-// insert before
-// arguments: value, new value
-// 
-// insert after
-// arguments: value, new value
-//
-// for (let i=0; i<LinkedList.length;i++)
-
-class Node {
-  constructor(value) {
-    this.value = value;
-    this.next = null;
+  NthFromTheEnd(k) {
+    if(k < 0 || k > this.length) {
+      return 'Exception';
+    }
+    let temp = (this.length - 1) - k;
+    let current = this.head;
+    if(temp === 0){
+      return current.value;
+    }
+    for(let i = 0; i < temp; i++){
+      current = current.next;
+    }
+    return current.value;
   }
 }
 
-module.exports = LinkedList;
+const zipLists = (list1, list2) => {
+  let current1 = list1.head;
+  let current2 = list2.head;
+  let list3 = new LinkedList();
+  while (current1 || current2) {
+    if (current1) {
+      list3.append(current1.value);
+      current1 = current1.next;
+    }
+    if (current2) {
+      list3.append(current2.value);
+      current2 = current2.next;
+    }
+  }
+  return list3;
+};
+
+class Node {
+  constructor(value, next=null) {
+    this.value = value;
+    this.next = next;
+  }
+}
+
+module.exports = { LinkedList, zipLists };
