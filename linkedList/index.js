@@ -83,6 +83,32 @@ class LinkedList {
     }
   }
 
+
+  reverse(value){
+
+    var prev = null;
+    
+    var current = this.head;
+    
+    var next =null;
+    
+    while (current !=null){
+    
+      next = current.next;
+    
+      current.next = prev;
+    
+      prev = current;
+    
+      current = next;
+    
+      }
+    
+    value = prev;
+    
+    return value;
+    }
+
   NthFromTheEnd(k) {
     if(k < 0 || k > this.length) {
       return 'Exception';
