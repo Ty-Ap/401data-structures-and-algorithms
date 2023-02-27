@@ -92,5 +92,17 @@ describe('Linked List', ()=> {
     expect(zipped.head.next.next.next.value).toEqual('mosh2');
     
   })
+
+  it ('should reverse a linked list', ()=> {
+    const linked = new LinkedList();
+    linked.insert('metalcore2');
+    linked.insert('metalcore');
+
+    linked.reverse(linked);
+    expect(linked.head.value).toEqual('metalcore');
+
+    
+
+  })
 });
 
