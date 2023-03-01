@@ -34,6 +34,30 @@ class Stack {
   isEmpty() {
     return !this.top;
   }
+
+  validateBrackets(str) {
+    const arr = [];
+  
+    for (let i = 0; i < str.length; i++) {
+      const char = str[i];
+  
+      if (char === '(' || char === '[' || char === '{') {
+        arr.push(char);
+      } else if (char === ')' || char === ']' || char === '}') {
+        const last = arr.pop();
+  
+        if (
+          (last === '(' && char !== ')') ||
+          (last === '[' && char !== ']') ||
+          (last === '{' && char !== '}')
+        ) {
+          return false;
+        }
+      }
+    }
+  
+    return arr.length === 0;
+  }
 }
 
 class Queue {
@@ -41,6 +65,8 @@ class Queue {
     this.front = null;
     this.back = null;
   }
+
+
 
   // enqueue(value) {
   //   let newNode = new Node(value);
@@ -167,6 +193,8 @@ class AnimalShelter {
   }
 
 }
+
+
 
 
 module.exports = { Stack, Queue, PseudoQueue, AnimalShelter };
