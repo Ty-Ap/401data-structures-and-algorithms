@@ -1,8 +1,13 @@
 # 401data-structures-and-algorithms
 
+collabs and conspirators, Joe Davitt, Jordan, Adrienne
 
-## code-challenge03
 
-[code challenge 3](./array-binary-search/README.md)
+## table of contents
 
-[code challenge 8](./linkedList/README.md)
+[binary search](./array-binary-search/README.md)
+
+[linked lists](./linkedList/README.md)
+
+
+[stack/queues](./stack/README.md)
