@@ -13,4 +13,6 @@ big O is O(n) for space for this data structure, and the O for methods depends b
 
 ## API
 
-currently the add, preOrder,inOrder,postOrder and contains all work
+currently the add, preOrder,inOrder,postOrder and contains all work and max
+
+![uml](../assets/challenge16_720.png)
