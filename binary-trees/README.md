@@ -1,5 +1,9 @@
 # Trees
 
+## collaborators
+
+joe davit, jordan covington, adrienne frey, ken holt.
+
 trees are a data structure that is a collection of nodes, with right and left properties
 
 ## Challenge
