@@ -1,7 +1,7 @@
 'use strict';
 
 
-const {binaryTree, Node, Tree} = require('../binary-trees/binaryTree');
+const {binaryTree, Node, Tree,breadthFirst} = require('../binary-trees/binaryTree');
 
 describe ('Tree', ()=> {
   let tree = new Tree();
@@ -53,5 +53,16 @@ describe ('Tree', ()=> {
     
   });
   
+  it('breadthFirst works', () => {
+    let tree = new Tree();
+    tree.root = new Node(5);
+    tree.root.left = new Node(1);
+    tree.root.right = new Node(8);
+    tree.root.left.left = new Node(10);
+
+    let breadth = breadthFirst(tree);
+    expect(breadth).toEqual([5,1,8,10]);
+
+  });
 });
 

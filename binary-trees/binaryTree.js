@@ -151,7 +151,23 @@ class binaryTree extends Tree{
       console.log(node.value);
     }
   }
+}
 
+function breadthFirst(tree) {
+  let arr = [];
+  let queue = [tree.root];
+
+  while (queue.length > 0) {
+    let current = queue.shift();
+    arr.push(current.value);
+    if(current.left){
+      queue.push(current.left);
+    }
+    if(current.right){
+      queue.push(current.right);
+    }
+  }
+  return arr;
 }
 
 
@@ -164,6 +180,6 @@ tree.root.left.left = new Node(1);
 tree.root.left.right = new Node(8);
 tree.root.right.right = new Node(17);
 
-module.exports = {Tree, Node, binaryTree};
+module.exports = {Tree, Node, binaryTree, breadthFirst};
 
 
