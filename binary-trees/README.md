@@ -20,3 +20,10 @@ big O is O(n) for space for this data structure, and the O for methods depends b
 currently the add, preOrder,inOrder,postOrder and contains all work and max
 
 ![uml](../assets/challenge16_720.png)
+
+## fizzbuzz
+
+using node values and trees, we can use fizzbuzz on a tree. collaborators martin hansen& jonathan staib
+
+![fizzbuzzuml](../assets/challenge17.png)
+
