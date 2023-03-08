@@ -27,3 +27,7 @@ using node values and trees, we can use fizzbuzz on a tree. collaborators martin
 
 ![fizzbuzzuml](../assets/challenge17.png)
 
+## code challenge 3/9/2023
+
+i had errands to run and coul not partner. here is my  code challenge work, timeboxed to 30 mins. a more elegant solution exists using a while loop instead im sure.
+![uml](../assets/Untitled%20(5).png)
