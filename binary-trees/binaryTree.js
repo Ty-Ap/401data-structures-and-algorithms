@@ -172,6 +172,8 @@ function breadthFirst(tree) {
 
 
 
+
+
 let tree = new Tree();
 tree.root = new Node(10);
 tree.root.left = new Node(5);

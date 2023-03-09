@@ -3,6 +3,8 @@
 
 const {binaryTree, Node, Tree,breadthFirst} = require('../binary-trees/binaryTree');
 
+const fizzBuzzTree = require('../binary-trees/fizzBuzz');
+
 describe ('Tree', ()=> {
   let tree = new Tree();
 
@@ -63,6 +65,19 @@ describe ('Tree', ()=> {
     let breadth = breadthFirst(tree);
     expect(breadth).toEqual([5,1,8,10]);
 
+  });
+
+  it('Fizz Buzz returns new tree', () => {
+    let tree = new Tree();
+    tree.root = new Node(3);
+    tree.root.left = new Node(5);
+    tree.root.right = new Node(1);
+    tree.root.left.left = new Node(15);
+    let test = fizzBuzzTree(tree);
+    expect(test.root.value).toEqual('fizz');
+    expect(test.root.left.value).toEqual('buzz');
+    expect(test.root.right.value).toEqual(1);
+    expect(test.root.left.left.value).toEqual('fizzBuzz');
   });
 });
 
