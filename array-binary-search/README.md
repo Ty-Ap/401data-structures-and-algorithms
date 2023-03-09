@@ -1,14 +1,16 @@
 # array-binary-search
 
-## Challenge
-
 The challenge of this problem is to implement a binary search algorithm on a sorted array of integers. Given a sorted array and a target value, the algorithm should return the index of the target value in the array, or -1 if the value is not found.
 
-### Approach
+## whiteboard
+
+![binary search wb](/assets/BinarySearch.png)
+
+## Approach
 
 The binary search algorithm works by repeatedly dividing the array in half until the target value is found. The algorithm begins by comparing the target value to the middle element of the array. If the target value is less than the middle element, the algorithm repeats the search on the left half of the array. If the target value is greater than the middle element, the algorithm repeats the search on the right half of the array. This process is repeated until the target value is found or until the array is exhausted.
 
-### Example
+## Solution
 
 Suppose we have the following sorted array of integers:
 
@@ -21,4 +23,17 @@ The middle element of the right half of the array is 13. Since 11 is less than 1
 
 The middle element of the left half of the right half of the array is 11, which is the target value we are searching for. The algorithm returns the index of 11, which is 5.
 
-![binary search wb](/assets/BinarySearch.png)
+
+
+
+# Challenge Title
+<!-- Description of the challenge -->
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
