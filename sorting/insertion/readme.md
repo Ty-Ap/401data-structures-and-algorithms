@@ -48,3 +48,5 @@ The above psuedo code consists of two functions ; Insert, and InsertionSort, and
 #### sample
 
 for instance; say we have an array with the following values, [8,4,23,42,16,15] , running our functions to add a value of 9 would leave us a sorted array(ascending) of [4,8,9,15,16,23,42]
+
+![uml](../../assets/Untitled%20(6).png)
