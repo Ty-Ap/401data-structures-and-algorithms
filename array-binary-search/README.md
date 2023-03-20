@@ -26,14 +26,14 @@ The middle element of the left half of the right half of the array is 11, which 
 
 
 
-# Challenge Title
+<!-- # Challenge Title -->
 <!-- Description of the challenge -->
 
-## Whiteboard Process
+<!-- ## Whiteboard Process -->
 <!-- Embedded whiteboard image -->
 
-## Approach & Efficiency
+<!-- ## Approach & Efficiency -->
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
-## Solution
+<!-- ## Solution -->
 <!-- Show how to run your code, and examples of it in action -->

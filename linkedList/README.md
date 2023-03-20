@@ -4,7 +4,7 @@ collabs and conspirators, Joe Davitt, Jordan, Adrienne
 
 A linked list is a data structure that consists of a sequence of nodes, each containing an element of data and a reference (or pointer) to the next node in the sequence. Unlike arrays, linked lists do not have a fixed size, and nodes can be added or removed from the list at any time.
 
-Types of Linked Lists
+## Types of Linked Lists
 
 I've done a singly linked list but,
 There are several types of linked lists, including:
@@ -12,6 +12,10 @@ There are several types of linked lists, including:
 Doubly Linked List: Each node in the list contains a reference to both the next and previous nodes in the sequence.
 
 Circular Linked List: A linked list in which the last node points back to the first node, forming a loop.
+
+## Whiteboard Process
+
+![uml](../assets/exported-freehand.png.png)
 
 ## Operations on Linked Lists
 
@@ -48,7 +52,22 @@ No random access: Unlike arrays, linked lists do not allow for constant-time ran
 
 Extra memory overhead: Each node in a linked list requires an additional pointer to the next node, which can increase memory usage.
 
-![uml](../assets/exported-freehand.png.png)
+
 ![uml NthFromEnd](../assets/code-challenge-07_480.png)
 ![uml zip](../assets/linkedzip.png)
 ![um animal](../assets/challenge12.png)
+
+
+
+
+<!-- # Challenge Title -->
+<!-- Description of the challenge -->
+
+<!-- ## Whiteboard Process -->
+<!-- Embedded whiteboard image -->
+
+<!-- ## Approach & Efficiency -->
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+<!-- ## Solution -->
+<!-- Show how to run your code, and examples of it in action -->
