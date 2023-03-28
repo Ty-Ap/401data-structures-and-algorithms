@@ -105,10 +105,8 @@ class Tree {
 
 
 class binaryTree extends Tree{
-  super() {
-    this.root = null;
-  }
   preOrder() {
+    const results = [];
     const walk = (node) => {
 
       results.push(node);
@@ -117,8 +115,10 @@ class binaryTree extends Tree{
         walk(node.left);
       }
       if (node.right) {
-        traverse(node.right);
+        walk(node.right);
       }
+      walk(this.root);
+      return results;
     }
   }
 

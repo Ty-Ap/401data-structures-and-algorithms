@@ -7,7 +7,7 @@ class HashTable {
   }
 
   hash(key) {
-    let characters = key.split('');
+    let characters = String(key).split('');
     let asciiSum = characters.reduce((sum, character) => {
       return sum + character.charCodeAt(0);
     }, 0);
@@ -15,6 +15,7 @@ class HashTable {
     let initialHash = asciiSum * 599;
     return initialHash % this.size;
   }
+
 
   set(key, value) {
     let index = this.hash(key);
