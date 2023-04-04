@@ -3,6 +3,7 @@
 ## Problem Domain
 
 Write a function that returns both the minimum and maximum number of the given list/array.
+[linkToChallenge](https://www.codewars.com/kata/56d19b2ac05aed1a20000430)
 
 ## Approach & Efficiency
 
